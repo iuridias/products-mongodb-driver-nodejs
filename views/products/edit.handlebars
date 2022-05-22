@@ -1,0 +1,22 @@
+<h1>Editar produto {{product.name}}:</h1>
+<a href="/products">Voltar</a>
+<form action="/products/edit" method="POST">
+  <input type="hidden" name="id" value="{{product._id}}">
+  <div class="form-control">
+    <label for="name">Nome do Produto:</label>
+    <input type="text" name="name" id="name" placeholder="Digite o nome do produto" value="{{product.name}}">
+  </div>
+    <div class="form-control">
+    <label for="image">Imagem do Produto:</label>
+    <input type="text" name="image" id="image" placeholder="Insira a URL da imagem." value="{{product.image}}">
+  </div>
+  <div class="form-control">
+    <label for="price">Preço do Produto:</label>
+    <input type="text" name="price" id="price" placeholder="Digite o valor do produto" value="{{product.price}}">
+  </div>
+  <div class="form-control">
+    <label for="description">Descrição:</label>
+    <textarea name="description" id="description" placeholder="Descrição do produto">{{product.description}}</textarea>
+  </div>
+  <input type="submit" value="Editar" class="btn">
+</form>
